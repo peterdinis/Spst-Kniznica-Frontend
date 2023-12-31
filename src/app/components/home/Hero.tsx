@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { FC } from "react";
+import Link from "next/link";
 
 const Hero: FC = () => {
   return (
@@ -9,19 +11,21 @@ const Hero: FC = () => {
             SPŠT Knižnica
           </h1>
           <h2 className="md:w-8/12 py-4 text-center md:text-left md:py-8 text-gray-700 text-lg lg:text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rem cum tenetur animi a laborum fugit eligendi autem non laboriosam!
+           <q>Knihy sú jedinečne prenosné kúzlo - Stephen King</q>
           </h2>
           <div className="w-full flex justify-center md:block">
-            <button className="hover:opacity-90 bg-indigo-700 py-3 px-10 lg:py-7 lg:px-20 rounded-full text-white text-sm md:text-lg f-f-p">
-              Zobraziť všetky knihy
-            </button>
+            <Button size="lg" variant={"default"}>
+              <Link href="/books">Zobraziť všekty knihy</Link>
+            </Button>
+            <Button className="ml-4" size="lg" variant={"destructive"}>
+              <Link href="/books">Školská stránka</Link>
+            </Button>
           </div>
         </div>
         <div className="w-1/2 sm:w-2/5 h-64 md:h-auto m-auto flex items-center overflow-hidden">
-            {/* TODO: Zmeniť obrázok */}
           <img
-            className="md:absolute md:w-1/2 md:-ml-28"
-            src="https://cdn.tuk.dev/assets/components/111220/Hero4/Device - Macbook Pro.png"
+            className="md:absolute md:w-1/2 md:-ml-28 rounded-xl bg-transparent"
+            src="https://www.purshology.com/wp-content/uploads/2020/06/school-technology-FB.png"
             alt="Empty"
           />
         </div>
