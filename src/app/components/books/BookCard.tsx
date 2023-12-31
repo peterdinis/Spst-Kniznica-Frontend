@@ -17,7 +17,7 @@ const BookCard: FC = () => {
         <CardDescription>Card Description</CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button variant={"default"} size="lg">Detail <MoveRight /></Button>
+        <Button variant={"default"} size="lg">Detail <MoveRight className="ml-2" /></Button>
       </CardFooter>
     </Card>
   );
