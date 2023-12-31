@@ -8,6 +8,37 @@
   box-sizing: border-box;
 }
 
+.gallery-cell {
+  height: 386px;
+  padding-right:15px;
+}
+@media (min-width: 300px) and (max-width: 420px) {
+  .gallery-cell {
+      height: 286px !important;
+      
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-cell {
+      padding-right:0;
+  }
+}
+
+.carousel__sliderLarge {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* gives us the illusion of spaces between the slides */
+.carousel__inner-slideLarge {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  left: 10px;
+  top: 10px;
+  
+}
+
 html::-webkit-scrollbar {
   width: 16px;
   height: 16px;
