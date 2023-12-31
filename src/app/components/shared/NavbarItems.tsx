@@ -14,10 +14,10 @@ const NavbarItems: FC = () => {
                 <Link href='/categories'>Kategórie</Link>
             </li>
             <li className='text-black text-xl'>
-                <Link href='/student'>Žiak</Link>
+                <Link href='/student/login'>Žiak</Link>
             </li>
             <li className='text-black text-xl'>
-                <Link href='/teacher'>Učiteľ</Link>
+                <Link href='/teacher/login'>Učiteľ</Link>
             </li>
         </>
     );
