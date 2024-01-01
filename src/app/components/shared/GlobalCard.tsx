@@ -9,7 +9,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { MoveRight } from 'lucide-react';
 
-const BookCard: FC = () => {
+const GlobalCard: FC = () => {
     return (
         <Card>
             <CardHeader>
@@ -25,4 +25,4 @@ const BookCard: FC = () => {
     );
 };
 
-export default BookCard;
+export default GlobalCard;
