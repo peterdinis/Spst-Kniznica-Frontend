@@ -14,6 +14,9 @@ const NavbarItems: FC = () => {
                 <Link href='/categories'>Kategórie</Link>
             </li>
             <li className='text-black text-xl'>
+                <Link href='/authors'>Spistovatelia</Link>
+            </li>
+            <li className='text-black text-xl'>
                 <Link href='/student/login'>Žiak</Link>
             </li>
             <li className='text-black text-xl'>
