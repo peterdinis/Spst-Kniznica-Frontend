@@ -5,7 +5,7 @@ import { Link } from 'lucide-react';
 const TeacherRegisterForm: FC = () => {
     return (
         <>
-            <Header text="Registrácia učiteľ" />
+            <Header text='Registrácia učiteľ' />
             <form>
                 <div className='mb-4 flex flex-col rounded bg-white px-8 pb-8 pt-6 shadow-md'>
                     <div className='mb-4'>
@@ -61,7 +61,7 @@ const TeacherRegisterForm: FC = () => {
                 </div>
             </form>
         </>
-    )
+    );
 };
 
 export default TeacherRegisterForm;
