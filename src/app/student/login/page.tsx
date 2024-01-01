@@ -1,8 +1,8 @@
-import StudentLoginForm from "@/app/components/auth/StudentLoginForm";
-import { NextPage } from "next";
+import StudentLoginForm from '@/app/components/auth/StudentLoginForm';
+import { NextPage } from 'next';
 
 const StudentLoginPage: NextPage = () => {
-    return <StudentLoginForm />
-}
+    return <StudentLoginForm />;
+};
 
 export default StudentLoginPage;

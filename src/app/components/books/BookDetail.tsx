@@ -1,11 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const BookDetail: FC = () => {
-    return (
-        <>
-        
-        </>
-    )
-}
+    return <></>;
+};
 
 export default BookDetail;

@@ -1,8 +1,8 @@
-import TeacherRegisterForm from "@/app/components/auth/TeacherRegisterForm";
-import { NextPage } from "next";
+import TeacherRegisterForm from '@/app/components/auth/TeacherRegisterForm';
+import { NextPage } from 'next';
 
 const TeacherRegisterPage: NextPage = () => {
-    return <TeacherRegisterForm />
-}
+    return <TeacherRegisterForm />;
+};
 
 export default TeacherRegisterPage;

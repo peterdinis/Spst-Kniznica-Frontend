@@ -1,8 +1,8 @@
-import { NextPage } from "next";
-import AllAuthors from "../components/authors/AllAuthors";
+import { NextPage } from 'next';
+import AllAuthors from '../components/authors/AllAuthors';
 
 const AuthorsPage: NextPage = () => {
-    return <AllAuthors />
-}
+    return <AllAuthors />;
+};
 
-export default AuthorsPage
+export default AuthorsPage;

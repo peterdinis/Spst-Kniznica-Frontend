@@ -1,12 +1,12 @@
-import { FC } from "react";
-import Header from "../shared/Header";
+import { FC } from 'react';
+import Header from '../shared/Header';
 
-const AllAuthors: FC = () =>{
+const AllAuthors: FC = () => {
     return (
         <>
-            <Header text="Všetci spisovatelia" />
+            <Header text='Všetci spisovatelia' />
         </>
-    )
-}
+    );
+};
 
-export default AllAuthors
+export default AllAuthors;

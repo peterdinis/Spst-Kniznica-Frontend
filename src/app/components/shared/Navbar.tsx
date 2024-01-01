@@ -10,23 +10,23 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className='w-full bg-white'>
-            <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
+            <div className='mx-auto justify-between px-4 md:flex md:items-center md:px-8 lg:max-w-7xl'>
                 <div>
-                    <div className='flex items-center justify-between py-3 md:py-5 md:block'>
+                    <div className='flex items-center justify-between py-3 md:block md:py-5'>
                         <Link href='/'>
-                            <h2 className='text-xl text-black font-bold'>
+                            <h2 className='text-xl font-bold text-black'>
                                 Spšt Knižnica
                             </h2>
                         </Link>
                         <div className='md:hidden'>
                             <button
-                                className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
+                                className='rounded-md p-2 text-gray-700 outline-none focus:border focus:border-gray-400'
                                 onClick={() => setNavbar(!navbar)}
                             >
                                 {navbar ? (
-                                    <X className='font-bold h-6' />
+                                    <X className='h-6 font-bold' />
                                 ) : (
-                                    <Menu className='font-bold h-6' />
+                                    <Menu className='h-6 font-bold' />
                                 )}
                             </button>
                         </div>
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                        className={`mt-8 flex-1 justify-self-center pb-3 md:mt-0 md:block md:pb-0 ${
                             navbar ? 'block' : 'hidden'
                         }`}
                     >

@@ -1,8 +1,8 @@
-import BookDetail from "@/app/components/books/BookDetail";
-import { NextPage } from "next";
+import BookDetail from '@/app/components/books/BookDetail';
+import { NextPage } from 'next';
 
 const BookDetailPage: NextPage = () => {
-    return <BookDetail />
-}
+    return <BookDetail />;
+};
 
-export default BookDetailPage
+export default BookDetailPage;

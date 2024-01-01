@@ -1,11 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const TeacherRegisterForm: FC = () => {
-    return (
-        <>
-        a
-        </>
-    )
-}
+    return <>a</>;
+};
 
 export default TeacherRegisterForm;
