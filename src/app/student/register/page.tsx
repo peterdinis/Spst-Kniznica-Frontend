@@ -1,10 +1,8 @@
+import StudentRegisterForm from "@/app/components/auth/StudentRegisterForm";
 import { NextPage } from "next";
 
 const StudentRegisterPage: NextPage = () => {
-    return (
-        <>
-        </>
-    )
+    return <StudentRegisterForm />
 }
 
 export default StudentRegisterPage;
