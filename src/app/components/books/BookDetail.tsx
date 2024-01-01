@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Header from '../shared/Header';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import BookingModal from '../booking/BookingModal';
 
 const BookDetail: FC = () => {
     return (
@@ -63,7 +64,7 @@ const BookDetail: FC = () => {
                                 <Link href="/books">Návrat na knihy</Link>
                             </Button>
                             <Button variant={"secondary"} size={"lg"} className='mt-5 ml-4'>
-                                Požičať knihu
+                                <BookingModal />
                             </Button>
                             </div>
                             <br />
