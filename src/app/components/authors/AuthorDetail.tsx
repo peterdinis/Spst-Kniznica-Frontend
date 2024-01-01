@@ -1,11 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const AuthorDetailComponent: FC = () => {
-    return (
-        <>
-        
-        </>
-    )
-}
+    return <></>;
+};
 
 export default AuthorDetailComponent;

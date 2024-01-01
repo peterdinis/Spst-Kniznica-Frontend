@@ -32,7 +32,9 @@ const CategoryDetailComponent: FC = () => {
                             </dt>
                         </div>
                     </dl>
-                    <Button size={"lg"} variant={"default"}><Link href="/categories">Späť na kategórie</Link></Button>
+                    <Button size={'lg'} variant={'default'}>
+                        <Link href='/categories'>Späť na kategórie</Link>
+                    </Button>
                 </div>
             </div>
         </>

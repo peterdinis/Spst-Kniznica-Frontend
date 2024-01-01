@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/shared/Navbar';
 import { Toaster } from '@/components/ui/toaster';
+import QueryClientProviderComponet from '@/api/QueryClientProviderComponent';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,7 +30,9 @@ export default function RootLayout({
         <html lang='en'>
             <body className={inter.className}>
                 <Navbar />
-                {children}
+                <QueryClientProviderComponet>
+                    {children}
+                </QueryClientProviderComponet>
                 <Toaster />
             </body>
         </html>
