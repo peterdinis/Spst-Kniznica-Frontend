@@ -60,12 +60,20 @@ const BookDetail: FC = () => {
 
                             <hr className='mt-6' />
                             <div className='flex'>
-                            <Button variant={"default"} size={"lg"} className='mt-5'>
-                                <Link href="/books">Návrat na knihy</Link>
-                            </Button>
-                            <Button variant={"secondary"} size={"lg"} className='mt-5 ml-4'>
-                                <BookingModal />
-                            </Button>
+                                <Button
+                                    variant={'default'}
+                                    size={'lg'}
+                                    className='mt-5'
+                                >
+                                    <Link href='/books'>Návrat na knihy</Link>
+                                </Button>
+                                <Button
+                                    variant={'secondary'}
+                                    size={'lg'}
+                                    className='ml-4 mt-5'
+                                >
+                                    <BookingModal />
+                                </Button>
                             </div>
                             <br />
                         </div>
