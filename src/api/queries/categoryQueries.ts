@@ -5,3 +5,12 @@ const api = axios.create({
 });
 
 export const allCategories = () =>api.get("/Categories").then((res) => res.data);
+
+export const getOneCategory = (id: number) => {
+    if (!id) {
+      return;
+    }
+  
+    return api.get(`/Categories/${id}`).then((res) => res.data);
+  };
+  

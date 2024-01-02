@@ -5,3 +5,11 @@ const api = axios.create({
 });
 
 export const allBooks = () =>api.get("/Books").then((res) => res.data);
+
+export const getOneBook = (id: number) => {
+    if (!id) {
+      return;
+    }
+  
+    return api.get(`/Books/${id}`).then((res) => res.data);
+  };
