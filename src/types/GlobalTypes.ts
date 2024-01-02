@@ -1,3 +1,7 @@
 import { BookType } from "./BookTypes";
 
-export type IGlobalCardType = BookType;
+type GlobalExtendedProps =  {
+    linkName: string
+}
+
+export type IGlobalCardType = GlobalExtendedProps & BookType;

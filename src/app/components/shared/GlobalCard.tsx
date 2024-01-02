@@ -8,17 +8,20 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MoveRight } from 'lucide-react';
+import { IGlobalCardType } from '@/types/GlobalTypes';
+import Link from 'next/link';
 
-const GlobalCard: FC = () => {
+
+const GlobalCard: FC<IGlobalCardType> = ({name, description, id, linkName}) => {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
+                <CardTitle>{name}</CardTitle>
+                <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardFooter>
                 <Button variant={'default'} size='lg'>
-                    Detail <MoveRight className='ml-2' />
+                    <Link href={`/${linkName}/${id}`}>Detail <MoveRight className='ml-2' /></Link>
                 </Button>
             </CardFooter>
         </Card>
