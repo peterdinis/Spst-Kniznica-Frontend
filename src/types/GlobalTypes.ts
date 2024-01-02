@@ -7,3 +7,7 @@ type GlobalExtendedProps =  {
 }
 
 export type IGlobalCardType = GlobalExtendedProps & BookType & CategoryType;
+
+export type EmptyProps = {
+    text: string;
+}

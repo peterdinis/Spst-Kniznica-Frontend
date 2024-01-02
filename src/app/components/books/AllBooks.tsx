@@ -9,6 +9,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Loader2 } from 'lucide-react';
 import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { BookType } from '@/types/BookTypes';
+import Empty from '../shared/Empty';
 
 const AllBooks: FC = () => {
     const { data, isLoading, isError } = useQuery({
@@ -32,6 +33,7 @@ const AllBooks: FC = () => {
     return (
         <>
             <Header text='Všetky knihy' />
+            {data.length === 0 && <Empty text='Knihy sa nepodarilo načítať' />}
             <div className='container mx-auto mt-8 grid gap-8 pt-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {data &&
                     data.map((item: BookType) => {

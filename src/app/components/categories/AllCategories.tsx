@@ -9,6 +9,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Loader2 } from 'lucide-react';
 import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { CategoryType } from '@/types/CategoryTypes';
+import Empty from '../shared/Empty';
 
 const AllCategories: FC = () => {
     const {data, isLoading, isError} = useQuery({
@@ -32,6 +33,7 @@ const AllCategories: FC = () => {
     return (
         <>
             <Header text='Všetky kategórie' />
+            {data.length === 0 && <Empty text='Žiadna kategória nie je v databáze' />}
             <div className='container mx-auto mt-8 grid gap-8 pt-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {data &&
                     data.map((item: CategoryType) => {
