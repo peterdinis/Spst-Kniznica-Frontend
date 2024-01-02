@@ -8,6 +8,8 @@ import * as api from "@/api/queries/exampleQuery";
 import { Loader } from 'lucide-react';
 import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { queryClient } from '@/api/queryClient';
+import Image from 'next/image';
+import schollImage from "../../../../public/img/school.png"
 
 const Hero: FC = () => {
     const {data, isLoading, isError} = useQuery({
@@ -52,10 +54,11 @@ const Hero: FC = () => {
                         </div>
                     </div>
                     <div className='m-auto flex h-64 w-1/2 items-center overflow-hidden sm:w-2/5 md:h-auto'>
-                        <img
+                        <Image 
+                            src={schollImage}
+                            alt="Scholl homepage"
                             className='rounded-xl bg-transparent md:absolute md:-ml-28 md:w-1/2'
-                            src='https://www.purshology.com/wp-content/uploads/2020/06/school-technology-FB.png'
-                            alt='Empty'
+                            placeholder="blur"
                         />
                     </div>
                 </div>

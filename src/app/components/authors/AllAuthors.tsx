@@ -25,7 +25,7 @@ const AllAuthors: FC = () => {
         return (
             <GlobalErrorComponent
                 statusCode='400'
-                message='Failed to load books'
+                message='Nepodailo sa nčítať autorov'
             />
         );
     }
@@ -33,7 +33,7 @@ const AllAuthors: FC = () => {
     return (
         <>
             <Header text='Všetci spisovatelia' />
-            {data.length === 0 && <Empty text='Spisovateľov sa nepodairlo načítať' />}
+            {data.length === 0 && <Empty text='Žiaden spisovateľ nie je v databáze' />}
         </>
     );
 };
