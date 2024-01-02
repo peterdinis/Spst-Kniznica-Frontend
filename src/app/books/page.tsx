@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import AllBooksWrapper from '../components/books/AllBooksWrapper';
+import AllBooks from '../components/books/AllBooks';
 
 const AllBooksPage: NextPage = () => {
-    return <AllBooksWrapper />;
+    return <AllBooks />;
 };
 
 export default AllBooksPage;
