@@ -5,7 +5,7 @@ import { FC } from 'react';
 import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 import * as api from '@/api/queries/exampleQuery';
-import { Loader } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { queryClient } from '@/api/queryClient';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ const Hero: FC = () => {
     });
 
     if (isLoading) {
-        return <Loader className='h-8 w-8 animate-spin' />;
+        return <Loader2 className='h-8 w-8 animate-spin' />;
     }
 
     if (isError) {
