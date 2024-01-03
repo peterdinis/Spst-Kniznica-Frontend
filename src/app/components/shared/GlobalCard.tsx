@@ -26,7 +26,7 @@ const GlobalCard: FC<IGlobalCardType> = ({
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardFooter>
-                <Button variant={'default'} size='lg'>
+                <Button  variant={'default'} size='lg'>
                     <Link href={`/${linkName}/${id}`}>
                         Detail <MoveRight className='ml-2' />
                     </Link>
