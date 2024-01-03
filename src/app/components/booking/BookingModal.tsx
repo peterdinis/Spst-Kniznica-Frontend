@@ -45,7 +45,13 @@ const BookingModal: FC = () => {
                             <div className='mt-2'>
                                 <Input
                                     type='text'
-                                    placeholder='Meno a priezvisko osoby ktorá si chce požičať knihu'
+                                    placeholder='Meno'
+                                />
+                            </div>
+                            <div className='mt-4'>
+                                <Input
+                                    type='text'
+                                    placeholder='Priezvisko'
                                 />
                             </div>
                             <div className='mt-4'>

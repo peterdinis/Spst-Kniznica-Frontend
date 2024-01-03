@@ -11,6 +11,7 @@ import { useQuery } from '@tanstack/react-query';
 import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { Loader2 } from 'lucide-react';
 import {format} from "date-fns";
+import ScrollToTop from 'react-scroll-to-top';
 
 const BookDetail: FC = () => {
     const { id } = useParams();
@@ -123,6 +124,7 @@ const BookDetail: FC = () => {
                     </section>
                 </>
             ) : null}
+            <ScrollToTop />
         </>
     );
 };
