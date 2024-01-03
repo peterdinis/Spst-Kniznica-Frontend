@@ -8,4 +8,4 @@ export type BookType = {
     year?: Date | string;
     image?: string;
     quantity?: number;
-}
+};
