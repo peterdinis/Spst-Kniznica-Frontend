@@ -48,14 +48,14 @@ const Hero: FC = () => {
                                 </q>
                             </h2>
                             <div className='flex w-full justify-center md:block'>
-                                <Button size='lg' variant={'default'}>
+                                <Button size='lg1' variant={'default'}>
                                     <Link href='/books'>
                                         Zobraziť všekty knihy
                                     </Link>
                                 </Button>
                                 <Button
                                     className='ml-4'
-                                    size='lg'
+                                    size='lg1'
                                     variant={'destructive'}
                                 >
                                     <Link href='/books'>Školská stránka</Link>
