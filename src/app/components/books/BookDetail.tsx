@@ -12,6 +12,7 @@ import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { Loader2 } from 'lucide-react';
 import {format} from "date-fns";
 import ScrollToTop from 'react-scroll-to-top';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const BookDetail: FC = () => {
     const { id } = useParams();
@@ -39,7 +40,7 @@ const BookDetail: FC = () => {
                     <section className='body-font mt-2 overflow-hidden bg-white text-gray-700'>
                         <div className='container mx-auto px-5 py-12'>
                             <div className='mx-auto flex flex-wrap lg:w-4/5'>
-                                <img
+                                <LazyLoadImage
                                     alt={data && data.name}
                                     className='w-full rounded-lg border object-cover object-center drop-shadow-md lg:w-1/2'
                                     src={data &&data.image}

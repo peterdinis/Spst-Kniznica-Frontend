@@ -8,6 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { IGlobalCardType } from '@/types/GlobalTypes';
 import Link from 'next/link';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const GlobalCard: FC<IGlobalCardType> = ({
     name,
@@ -21,7 +22,7 @@ const GlobalCard: FC<IGlobalCardType> = ({
             {!image ? (
                 <></>
             ) : (
-                <img
+                <LazyLoadImage
                     src={image as unknown as string}
                     alt={name as unknown as string}
                 />
