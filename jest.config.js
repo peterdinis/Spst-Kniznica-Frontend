@@ -1,4 +1,4 @@
-const nextJest = require('next/jest')
+const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
   dir: './',
@@ -6,10 +6,10 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ['./src/jest.setup.ts'],
   moduleNameMapper: {
-    '^@/components/(.*)$': '<rootDir>/components/$1',
-    '^@/app/(.*)$': '<rootDir>/app/$1',
+    '^@/components/(.*)$': './src/components/$1',
+    '^@/app/(.*)$': './src/app/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
 }
