@@ -10,6 +10,7 @@ import * as api from '../../../api/queries/bookQueries';
 import { useQuery } from '@tanstack/react-query';
 import GlobalErrorComponent from '../shared/GlobalErrorComponent';
 import { Loader2 } from 'lucide-react';
+import {format} from "date-fns";
 
 const BookDetail: FC = () => {
     const { id } = useParams();
@@ -62,7 +63,7 @@ const BookDetail: FC = () => {
                                     </p>
                                     <p className='mb-4 mt-3 text-2xl font-light  leading-relaxed text-gray-800'>
                                         <span className='font-bold'> Rok</span>:
-                                        {data && data.year}
+                                        {data && format(data.year, 'dd-MM-yyyy')}
                                     </p>
                                     <p className='mb-4 mt-3 text-2xl font-light  leading-relaxed text-gray-800'>
                                         <span className='font-bold'>
