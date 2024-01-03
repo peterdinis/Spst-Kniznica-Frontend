@@ -41,6 +41,7 @@ const AllBooks: FC = () => {
                     data.map((item: BookType) => {
                         return (
                             <GlobalCard
+                                image={item.image}
                                 linkName='books'
                                 name={item.name}
                                 description={item.description}

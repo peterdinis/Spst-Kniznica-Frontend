@@ -16,9 +16,11 @@ const GlobalCard: FC<IGlobalCardType> = ({
     description,
     id,
     linkName,
+    image,
 }) => {
     return (
         <Card>
+            <img src={image as unknown as string} alt={name as unknown as string} />
             <CardHeader>
                 <CardTitle>{name}</CardTitle>
                 <CardDescription>{description}</CardDescription>

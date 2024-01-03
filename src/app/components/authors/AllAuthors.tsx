@@ -41,6 +41,7 @@ const AllAuthors: FC = () => {
                     data.map((item: AuthorType) => {
                         return (
                             <GlobalCard
+                                image={item.authorImage}
                                 linkName='authors'
                                 name={item.name}
                                 description={item.authorDescription}
