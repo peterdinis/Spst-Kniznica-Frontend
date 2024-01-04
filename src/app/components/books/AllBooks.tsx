@@ -15,6 +15,8 @@ const AllBooks: FC = () => {
     const { data, isLoading, isError } = useQuery({
         queryKey: ['allBooks'],
         queryFn: api.allBooks,
+        staleTime: Infinity,
+        placeholderData: []
     });
 
     if (isLoading) {

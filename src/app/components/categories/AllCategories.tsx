@@ -15,6 +15,8 @@ const AllCategories: FC = () => {
     const { data, isLoading, isError } = useQuery({
         queryKey: ['allCategories'],
         queryFn: api.allCategories,
+        placeholderData: [],
+        staleTime: Infinity,
     });
 
     if (isLoading) {

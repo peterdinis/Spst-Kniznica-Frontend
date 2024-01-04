@@ -12,9 +12,12 @@ import Empty from '../shared/Empty';
 import { AuthorType } from '@/types/AuthorTypes';
 
 const AllAuthors: FC = () => {
+    
     const { data, isLoading, isError } = useQuery({
         queryKey: ['allAuthors'],
         queryFn: api.getAuthors,
+        placeholderData: [],
+        staleTime: Infinity
     });
 
     if (isLoading) {
