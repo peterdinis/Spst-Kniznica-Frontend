@@ -19,24 +19,16 @@ import {
 import { Input } from '@/components/ui/input';
 import ScrollToTop from 'react-scroll-to-top';
 import {v4} from "uuid";
-
-const formSchema = z.object({
-    id: z.number().int(),
-    name: z.string(),
-    description: z.string(),
-    authorName: z.string(),
-    pages: z.number().int(),
-    status: z.string(),
-    year: z.string().optional(),
-    image: z.string().optional(),
-    quantity: z.number().int(),
-});
+import { useToast } from '@/components/ui/use-toast';
+import { createBookSchema } from '@/api/schemas/bookSchemas';
+import { useMutation } from '@tanstack/react-query';
+import * as mut from "@/api/mutations/bookMutations"
 
 const CreateBook: FC = () => {
     const router = useRouter();
 
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+    const form = useForm<z.infer<typeof createBookSchema>>({
+        resolver: zodResolver(createBookSchema),
         defaultValues: {
             id: v4() as unknown as number,
             name: '',
@@ -50,11 +42,21 @@ const CreateBook: FC = () => {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        // You can perform actions with the form values here, like sending them to an API or processing them.
-        // For instance, you can use the router to navigate to another page:
-        // router.push('/some-other-page');
+    const {toast} = useToast();
+
+    function onSubmit(values: z.infer<typeof createBookSchema>) {
+        const createBookMutation = useMutation({
+            mutationKey: ["createNewBook"],
+            mutationFn: () => mut.createNewBook(values)
+        })
+
+        createBookMutation.mutate();
+
+        toast({
+            title: "Nová kniha bola vytvorená",
+            duration: 2000,
+            className: "bg-green-500"
+        })
     }
 
     return (
@@ -108,7 +110,7 @@ const CreateBook: FC = () => {
                         <FormField
                             control={form.control}
                             name='pages'
-                            render={({ field }) => (
+                            render={({ field }: number) => (
                                 <FormItem>
                                     <FormLabel>Pages</FormLabel>
                                     <FormControl>
@@ -150,7 +152,7 @@ const CreateBook: FC = () => {
                         <FormField
                             control={form.control}
                             name='image'
-                            render={({ field }) => (
+                            render={({ field }: number) => (
                                 <FormItem>
                                     <FormLabel>Image URL</FormLabel>
                                     <FormControl>
