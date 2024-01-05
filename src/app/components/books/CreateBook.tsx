@@ -110,11 +110,11 @@ const CreateBook: FC = () => {
                         <FormField
                             control={form.control}
                             name='pages'
-                            render={({ field }: number) => (
+                            render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>Pages</FormLabel>
                                     <FormControl>
-                                        <Input type='number' placeholder='Pages' {...field} />
+                                        <Input type='number' min={1} placeholder='Pages' {...field} />
                                     </FormControl>
                                     <FormDescription>Enter the number of pages.</FormDescription>
                                     <FormMessage />
@@ -152,7 +152,7 @@ const CreateBook: FC = () => {
                         <FormField
                             control={form.control}
                             name='image'
-                            render={({ field }: number) => (
+                            render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>Image URL</FormLabel>
                                     <FormControl>
@@ -170,7 +170,7 @@ const CreateBook: FC = () => {
                                 <FormItem>
                                     <FormLabel>Quantity</FormLabel>
                                     <FormControl>
-                                        <Input type='number' placeholder='Quantity' {...field} />
+                                        <Input type='number' min={10000} placeholder='Quantity' {...field} />
                                     </FormControl>
                                     <FormDescription>Enter the quantity.</FormDescription>
                                     <FormMessage />
