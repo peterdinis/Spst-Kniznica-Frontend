@@ -16,7 +16,7 @@ import {
     FormLabel,
     FormMessage,
 } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+import { Input, InputNumber } from '@/components/ui/input';
 import ScrollToTop from 'react-scroll-to-top';
 import {v4} from "uuid";
 import { useToast } from '@/components/ui/use-toast';
@@ -114,7 +114,7 @@ const CreateBook: FC = () => {
                                 <FormItem>
                                     <FormLabel>Pages</FormLabel>
                                     <FormControl>
-                                        <Input type='number' min={1} placeholder='Pages' {...field} />
+                                        <InputNumber placeholder='Pages' {...field} />
                                     </FormControl>
                                     <FormDescription>Enter the number of pages.</FormDescription>
                                     <FormMessage />
@@ -170,7 +170,7 @@ const CreateBook: FC = () => {
                                 <FormItem>
                                     <FormLabel>Quantity</FormLabel>
                                     <FormControl>
-                                        <Input type='number' min={10000} placeholder='Quantity' {...field} />
+                                        <Input type='number' min={1} placeholder='Quantity' {...field} />
                                     </FormControl>
                                     <FormDescription>Enter the quantity.</FormDescription>
                                     <FormMessage />
