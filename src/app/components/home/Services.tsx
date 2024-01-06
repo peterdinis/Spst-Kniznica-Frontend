@@ -1,6 +1,7 @@
 import { Home, School2 } from 'lucide-react';
+import { FC } from 'react';
 
-const Services: React.FC = () => {
+const Services: FC = () => {
     return (
         <div className='overflow-y-hidden'>
             <div className='bg-gray-100 py-12'>
